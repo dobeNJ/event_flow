@@ -1,5 +1,5 @@
 data:
-    path: datasets/data/MVSEC/
+    path: ../../../../../../media/doha/SSK Drive/dataset/MVSEC/outdoor_night2_gt.hdf5 #datasets/data/MVSEC/
     mode: gtflow_dt1 # gtflow_dt1/gtflow_dt4
     window: 1 # 1 for dt1, 0.25 for dt4
     window_eval: 15000 # not used

@@ -1,5 +1,5 @@
 data:
-    path: datasets/data/ECD/
+    path: ../../../../../../media/doha/SSK Drive/dataset/MVSEC/outdoor_night2_gt.hdf5 #datasets/data/ECD/
     mode: events # events/time/frames/gtflow_dt1/gtflow_dt4
     window: 15000 # events/time/frames/flowmaps
     window_eval: 15000 # events

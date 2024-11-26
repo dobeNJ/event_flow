@@ -1,0 +1,75 @@
+\hypertarget{classloss_1_1flow_1_1FWL}{}\doxysection{loss.\+flow.\+F\+WL Class Reference}
+\label{classloss_1_1flow_1_1FWL}\index{loss.flow.FWL@{loss.flow.FWL}}
+
+
+Inheritance diagram for loss.\+flow.\+F\+WL\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=236pt]{classloss_1_1flow_1_1FWL__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for loss.\+flow.\+F\+WL\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=236pt]{classloss_1_1flow_1_1FWL__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classloss_1_1flow_1_1FWL_aa7539014adca94c51de7cd29b4e7d75b}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, config, \mbox{\hyperlink{classloss_1_1flow_1_1BaseValidationLoss_ab87b468be6db01ff2484d73e80c4206b}{device}}, \mbox{\hyperlink{classloss_1_1flow_1_1BaseValidationLoss_aa61a86979532e52c3c1d0c08a7d0acc8}{flow\+\_\+scaling}}=128)
+\item 
+def \mbox{\hyperlink{classloss_1_1flow_1_1FWL_aa5e810d81bef28518b0dc0e5da8b2262}{forward}} (self)
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Flow Warp Loss (FWL), as described in Section 4.1 of the paper 'Reducing the Sim-to-Real Gap for Event
+Cameras', Stoffregen and Scheerlinck et al., ECCV'20.
+The FWL metric is the ratio of the contrast of the image of warped events and that of the image of
+(non-warped) events; hence, the larger the value of this metric, the better the optical flow estimate.
+Contrast is measured through the spatial variance of the image of events.
+Note that this metric is sensitive to the number of input events.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classloss_1_1flow_1_1FWL_aa7539014adca94c51de7cd29b4e7d75b}\label{classloss_1_1flow_1_1FWL_aa7539014adca94c51de7cd29b4e7d75b}} 
+\index{loss.flow.FWL@{loss.flow.FWL}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!loss.flow.FWL@{loss.flow.FWL}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def loss.\+flow.\+F\+W\+L.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{config,  }\item[{}]{device,  }\item[{}]{flow\+\_\+scaling = {\ttfamily 128} }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classloss_1_1flow_1_1BaseValidationLoss_a04906883e47d86df5074030c7295b25a}{loss.\+flow.\+Base\+Validation\+Loss}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classloss_1_1flow_1_1FWL_aa5e810d81bef28518b0dc0e5da8b2262}\label{classloss_1_1flow_1_1FWL_aa5e810d81bef28518b0dc0e5da8b2262}} 
+\index{loss.flow.FWL@{loss.flow.FWL}!forward@{forward}}
+\index{forward@{forward}!loss.flow.FWL@{loss.flow.FWL}}
+\doxysubsubsection{\texorpdfstring{forward()}{forward()}}
+{\footnotesize\ttfamily def loss.\+flow.\+F\+W\+L.\+forward (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classloss_1_1flow_1_1FWL_aa5e810d81bef28518b0dc0e5da8b2262_cgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{flow_8py}{flow.\+py}}\end{DoxyCompactItemize}
