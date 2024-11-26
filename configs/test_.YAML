@@ -1,0 +1,9 @@
+experiment: Default #Used to name the experiment by MLFlow to log the metrics
+
+data:
+  path: # contains the path to the dataset( .H5 file)
+  mode: events # Data is processed based on events count ( eg. &000 events per wiindow)
+  window: 1000 # Number of events per window
+  window_loss: 10000 # Number of events used in each loss computation window
+
+  

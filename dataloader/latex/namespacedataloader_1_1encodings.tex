@@ -1,0 +1,80 @@
+\hypertarget{namespacedataloader_1_1encodings}{}\doxysection{dataloader.\+encodings Namespace Reference}
+\label{namespacedataloader_1_1encodings}\index{dataloader.encodings@{dataloader.encodings}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespacedataloader_1_1encodings_af175cfa3d99b1fc7789f2a7b02ffd6ed}{binary\+\_\+search\+\_\+array}} (array, x, left=None, right=None, side=\char`\"{}left\char`\"{})
+\item 
+def \mbox{\hyperlink{namespacedataloader_1_1encodings_aef614b0431d02cd2a2a33686bb6a84b2}{events\+\_\+to\+\_\+image}} (xs, ys, ps, sensor\+\_\+size=(180, 240), accumulate=True)
+\item 
+def \mbox{\hyperlink{namespacedataloader_1_1encodings_a71d95b00fa10728ccd2a35b220d49dda}{events\+\_\+to\+\_\+voxel}} (xs, ys, ts, ps, num\+\_\+bins, sensor\+\_\+size=(180, 240), round\+\_\+ts=False)
+\item 
+def \mbox{\hyperlink{namespacedataloader_1_1encodings_a210d25b32286fb1ff76a589497a81a9a}{events\+\_\+to\+\_\+channels}} (xs, ys, ps, sensor\+\_\+size=(180, 240))
+\item 
+def \mbox{\hyperlink{namespacedataloader_1_1encodings_aaa24e68ad35fe304e5c368bacff8b420}{get\+\_\+hot\+\_\+event\+\_\+mask}} (event\+\_\+rate, idx, max\+\_\+px=100, min\+\_\+obvs=5, max\+\_\+rate=0.\+8)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Adapted from Monash University https://github.com/TimoStoff/events_contrast_maximization
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacedataloader_1_1encodings_af175cfa3d99b1fc7789f2a7b02ffd6ed}\label{namespacedataloader_1_1encodings_af175cfa3d99b1fc7789f2a7b02ffd6ed}} 
+\index{dataloader.encodings@{dataloader.encodings}!binary\_search\_array@{binary\_search\_array}}
+\index{binary\_search\_array@{binary\_search\_array}!dataloader.encodings@{dataloader.encodings}}
+\doxysubsubsection{\texorpdfstring{binary\_search\_array()}{binary\_search\_array()}}
+{\footnotesize\ttfamily def dataloader.\+encodings.\+binary\+\_\+search\+\_\+array (\begin{DoxyParamCaption}\item[{}]{array,  }\item[{}]{x,  }\item[{}]{left = {\ttfamily None},  }\item[{}]{right = {\ttfamily None},  }\item[{}]{side = {\ttfamily \char`\"{}left\char`\"{}} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Binary search through a sorted array.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{namespacedataloader_1_1encodings_a210d25b32286fb1ff76a589497a81a9a}\label{namespacedataloader_1_1encodings_a210d25b32286fb1ff76a589497a81a9a}} 
+\index{dataloader.encodings@{dataloader.encodings}!events\_to\_channels@{events\_to\_channels}}
+\index{events\_to\_channels@{events\_to\_channels}!dataloader.encodings@{dataloader.encodings}}
+\doxysubsubsection{\texorpdfstring{events\_to\_channels()}{events\_to\_channels()}}
+{\footnotesize\ttfamily def dataloader.\+encodings.\+events\+\_\+to\+\_\+channels (\begin{DoxyParamCaption}\item[{}]{xs,  }\item[{}]{ys,  }\item[{}]{ps,  }\item[{}]{sensor\+\_\+size = {\ttfamily (180,~240)} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Generate a two-channel event image containing per-pixel event counters.
+\end{DoxyVerb}
+ Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacedataloader_1_1encodings_a210d25b32286fb1ff76a589497a81a9a_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacedataloader_1_1encodings_aef614b0431d02cd2a2a33686bb6a84b2}\label{namespacedataloader_1_1encodings_aef614b0431d02cd2a2a33686bb6a84b2}} 
+\index{dataloader.encodings@{dataloader.encodings}!events\_to\_image@{events\_to\_image}}
+\index{events\_to\_image@{events\_to\_image}!dataloader.encodings@{dataloader.encodings}}
+\doxysubsubsection{\texorpdfstring{events\_to\_image()}{events\_to\_image()}}
+{\footnotesize\ttfamily def dataloader.\+encodings.\+events\+\_\+to\+\_\+image (\begin{DoxyParamCaption}\item[{}]{xs,  }\item[{}]{ys,  }\item[{}]{ps,  }\item[{}]{sensor\+\_\+size = {\ttfamily (180,~240)},  }\item[{}]{accumulate = {\ttfamily True} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Accumulate events into an image.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{namespacedataloader_1_1encodings_a71d95b00fa10728ccd2a35b220d49dda}\label{namespacedataloader_1_1encodings_a71d95b00fa10728ccd2a35b220d49dda}} 
+\index{dataloader.encodings@{dataloader.encodings}!events\_to\_voxel@{events\_to\_voxel}}
+\index{events\_to\_voxel@{events\_to\_voxel}!dataloader.encodings@{dataloader.encodings}}
+\doxysubsubsection{\texorpdfstring{events\_to\_voxel()}{events\_to\_voxel()}}
+{\footnotesize\ttfamily def dataloader.\+encodings.\+events\+\_\+to\+\_\+voxel (\begin{DoxyParamCaption}\item[{}]{xs,  }\item[{}]{ys,  }\item[{}]{ts,  }\item[{}]{ps,  }\item[{}]{num\+\_\+bins,  }\item[{}]{sensor\+\_\+size = {\ttfamily (180,~240)},  }\item[{}]{round\+\_\+ts = {\ttfamily False} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Generate a voxel grid from input events using temporal bilinear interpolation.
+\end{DoxyVerb}
+ Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacedataloader_1_1encodings_a71d95b00fa10728ccd2a35b220d49dda_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacedataloader_1_1encodings_aaa24e68ad35fe304e5c368bacff8b420}\label{namespacedataloader_1_1encodings_aaa24e68ad35fe304e5c368bacff8b420}} 
+\index{dataloader.encodings@{dataloader.encodings}!get\_hot\_event\_mask@{get\_hot\_event\_mask}}
+\index{get\_hot\_event\_mask@{get\_hot\_event\_mask}!dataloader.encodings@{dataloader.encodings}}
+\doxysubsubsection{\texorpdfstring{get\_hot\_event\_mask()}{get\_hot\_event\_mask()}}
+{\footnotesize\ttfamily def dataloader.\+encodings.\+get\+\_\+hot\+\_\+event\+\_\+mask (\begin{DoxyParamCaption}\item[{}]{event\+\_\+rate,  }\item[{}]{idx,  }\item[{}]{max\+\_\+px = {\ttfamily 100},  }\item[{}]{min\+\_\+obvs = {\ttfamily 5},  }\item[{}]{max\+\_\+rate = {\ttfamily 0.8} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Returns binary mask to remove events from hot pixels.
+\end{DoxyVerb}
+ 

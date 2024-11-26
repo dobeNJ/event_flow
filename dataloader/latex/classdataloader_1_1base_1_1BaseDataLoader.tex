@@ -1,0 +1,380 @@
+\hypertarget{classdataloader_1_1base_1_1BaseDataLoader}{}\doxysection{dataloader.\+base.\+Base\+Data\+Loader Class Reference}
+\label{classdataloader_1_1base_1_1BaseDataLoader}\index{dataloader.base.BaseDataLoader@{dataloader.base.BaseDataLoader}}
+
+
+Inheritance diagram for dataloader.\+base.\+Base\+Data\+Loader\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=225pt]{classdataloader_1_1base_1_1BaseDataLoader__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for dataloader.\+base.\+Base\+Data\+Loader\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=225pt]{classdataloader_1_1base_1_1BaseDataLoader__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classdataloader_1_1base_1_1BaseDataLoader_a9e7080949fb7af146e1f89ec884b9cea}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, \mbox{\hyperlink{classdataloader_1_1base_1_1BaseDataLoader_a35b51f2263a8b217d96be00f6c88966d}{config}}, \mbox{\hyperlink{classdataloader_1_1base_1_1BaseDataLoader_ad04658aa67476b860491d5eba65f9acc}{num\+\_\+bins}}, \mbox{\hyperlink{classdataloader_1_1base_1_1BaseDataLoader_a7587215d98c437efecf9892767c5d062}{round\+\_\+encoding}}=False)
+\item 
+def \mbox{\hyperlink{classdataloader_1_1base_1_1BaseDataLoader_ad550b4cf159ded91e32a6105f7ace51d}{\+\_\+\+\_\+getitem\+\_\+\+\_\+}} (self, index)
+\item 
+def \mbox{\hyperlink{classdataloader_1_1base_1_1BaseDataLoader_a53bda9558a28b495ecaa2eac95f89c7b}{get\+\_\+events}} (self, history)
+\item 
+def \mbox{\hyperlink{classdataloader_1_1base_1_1BaseDataLoader_a81d001747266cdfedfb9c26809bf29bb}{reset\+\_\+sequence}} (self, batch)
+\item 
+def \mbox{\hyperlink{classdataloader_1_1base_1_1BaseDataLoader_ae548c6ec763da52b301d9878e9aea395}{augment\+\_\+events}} (self, xs, ys, ps, batch)
+\item 
+def \mbox{\hyperlink{classdataloader_1_1base_1_1BaseDataLoader_a8482bc6c005fb4a2211ff5c196c2c3f6}{augment\+\_\+frames}} (self, img, batch)
+\item 
+def \mbox{\hyperlink{classdataloader_1_1base_1_1BaseDataLoader_a5bbebd6f2408bff90dfa87606ca790f9}{augment\+\_\+flowmap}} (self, flowmap, batch)
+\item 
+def \mbox{\hyperlink{classdataloader_1_1base_1_1BaseDataLoader_a5a13c54e74f71ac31889ba3924673cf3}{create\+\_\+cnt\+\_\+encoding}} (self, xs, ys, ps)
+\item 
+def \mbox{\hyperlink{classdataloader_1_1base_1_1BaseDataLoader_a5cd2e5013a0668efc96fe580919b4e5a}{create\+\_\+mask\+\_\+encoding}} (self, xs, ys, ps)
+\item 
+def \mbox{\hyperlink{classdataloader_1_1base_1_1BaseDataLoader_ae8c4a65aa30b2d27da08aec77e8c231c}{create\+\_\+voxel\+\_\+encoding}} (self, xs, ys, ts, ps)
+\item 
+def \mbox{\hyperlink{classdataloader_1_1base_1_1BaseDataLoader_a1c6c5baf8d694f7079f8a751d18b1c85}{create\+\_\+hot\+\_\+mask}} (self, event\+\_\+cnt, batch)
+\item 
+def \mbox{\hyperlink{classdataloader_1_1base_1_1BaseDataLoader_a40293a2f43a7652d703c9fb3e4a7ed97}{\+\_\+\+\_\+len\+\_\+\+\_\+}} (self)
+\item 
+def \mbox{\hyperlink{classdataloader_1_1base_1_1BaseDataLoader_ae19266cc1bc3efc011b25b61ca2f138b}{shuffle}} (self, flag=True)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classdataloader_1_1base_1_1BaseDataLoader_a596767ceeb324208c16cf0d24303c17c}{event\+\_\+formatting}} (xs, ys, ts, ps)
+\item 
+def \mbox{\hyperlink{classdataloader_1_1base_1_1BaseDataLoader_a1c1006c726d5eddd1b87858f265faade}{create\+\_\+list\+\_\+encoding}} (xs, ys, ts, ps)
+\item 
+def \mbox{\hyperlink{classdataloader_1_1base_1_1BaseDataLoader_a144c3093d58d6167743d20e11a17cc9c}{create\+\_\+polarity\+\_\+mask}} (ps)
+\item 
+def \mbox{\hyperlink{classdataloader_1_1base_1_1BaseDataLoader_ae83441fad773f9743214ae57b3714665}{custom\+\_\+collate}} (batch)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classdataloader_1_1base_1_1BaseDataLoader_a35b51f2263a8b217d96be00f6c88966d}{config}}
+\item 
+\mbox{\hyperlink{classdataloader_1_1base_1_1BaseDataLoader_af31cbf9ad1def1461e1f5a95c8b5e581}{epoch}}
+\item 
+\mbox{\hyperlink{classdataloader_1_1base_1_1BaseDataLoader_a0b80298ffe49a01a515dc3c90eb7424c}{seq\+\_\+num}}
+\item 
+\mbox{\hyperlink{classdataloader_1_1base_1_1BaseDataLoader_ac86d34f08046b88e24a0ad600b83e98f}{samples}}
+\item 
+\mbox{\hyperlink{classdataloader_1_1base_1_1BaseDataLoader_aa127b784f31cb78385a660da60f01faa}{new\+\_\+seq}}
+\item 
+\mbox{\hyperlink{classdataloader_1_1base_1_1BaseDataLoader_ad04658aa67476b860491d5eba65f9acc}{num\+\_\+bins}}
+\item 
+\mbox{\hyperlink{classdataloader_1_1base_1_1BaseDataLoader_a7587215d98c437efecf9892767c5d062}{round\+\_\+encoding}}
+\item 
+\mbox{\hyperlink{classdataloader_1_1base_1_1BaseDataLoader_a99dfb2ccca523a8a5e4c43abc96d71a6}{batch\+\_\+augmentation}}
+\item 
+\mbox{\hyperlink{classdataloader_1_1base_1_1BaseDataLoader_a1c02ba890faa3a5e038f08ef69a62083}{hot\+\_\+idx}}
+\item 
+\mbox{\hyperlink{classdataloader_1_1base_1_1BaseDataLoader_af9dbdb3bfb24b2ebfff304df2a482cdb}{hot\+\_\+events}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Base class for dataloader.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classdataloader_1_1base_1_1BaseDataLoader_a9e7080949fb7af146e1f89ec884b9cea}\label{classdataloader_1_1base_1_1BaseDataLoader_a9e7080949fb7af146e1f89ec884b9cea}} 
+\index{dataloader.base.BaseDataLoader@{dataloader.base.BaseDataLoader}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!dataloader.base.BaseDataLoader@{dataloader.base.BaseDataLoader}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def dataloader.\+base.\+Base\+Data\+Loader.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{config,  }\item[{}]{num\+\_\+bins,  }\item[{}]{round\+\_\+encoding = {\ttfamily False} }\end{DoxyParamCaption})}
+
+
+
+Reimplemented in \mbox{\hyperlink{classdataloader_1_1h5_1_1H5Loader_ac6a4328c7361c80fc57bfeda89cede7a}{dataloader.\+h5.\+H5\+Loader}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classdataloader_1_1base_1_1BaseDataLoader_ad550b4cf159ded91e32a6105f7ace51d}\label{classdataloader_1_1base_1_1BaseDataLoader_ad550b4cf159ded91e32a6105f7ace51d}} 
+\index{dataloader.base.BaseDataLoader@{dataloader.base.BaseDataLoader}!\_\_getitem\_\_@{\_\_getitem\_\_}}
+\index{\_\_getitem\_\_@{\_\_getitem\_\_}!dataloader.base.BaseDataLoader@{dataloader.base.BaseDataLoader}}
+\doxysubsubsection{\texorpdfstring{\_\_getitem\_\_()}{\_\_getitem\_\_()}}
+{\footnotesize\ttfamily def dataloader.\+base.\+Base\+Data\+Loader.\+\_\+\+\_\+getitem\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{index }\end{DoxyParamCaption})}
+
+
+
+Reimplemented in \mbox{\hyperlink{classdataloader_1_1h5_1_1H5Loader_a00659181722ef0e44456d42c5b99e1f6}{dataloader.\+h5.\+H5\+Loader}}.
+
+\mbox{\Hypertarget{classdataloader_1_1base_1_1BaseDataLoader_a40293a2f43a7652d703c9fb3e4a7ed97}\label{classdataloader_1_1base_1_1BaseDataLoader_a40293a2f43a7652d703c9fb3e4a7ed97}} 
+\index{dataloader.base.BaseDataLoader@{dataloader.base.BaseDataLoader}!\_\_len\_\_@{\_\_len\_\_}}
+\index{\_\_len\_\_@{\_\_len\_\_}!dataloader.base.BaseDataLoader@{dataloader.base.BaseDataLoader}}
+\doxysubsubsection{\texorpdfstring{\_\_len\_\_()}{\_\_len\_\_()}}
+{\footnotesize\ttfamily def dataloader.\+base.\+Base\+Data\+Loader.\+\_\+\+\_\+len\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classdataloader_1_1base_1_1BaseDataLoader_ae548c6ec763da52b301d9878e9aea395}\label{classdataloader_1_1base_1_1BaseDataLoader_ae548c6ec763da52b301d9878e9aea395}} 
+\index{dataloader.base.BaseDataLoader@{dataloader.base.BaseDataLoader}!augment\_events@{augment\_events}}
+\index{augment\_events@{augment\_events}!dataloader.base.BaseDataLoader@{dataloader.base.BaseDataLoader}}
+\doxysubsubsection{\texorpdfstring{augment\_events()}{augment\_events()}}
+{\footnotesize\ttfamily def dataloader.\+base.\+Base\+Data\+Loader.\+augment\+\_\+events (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{xs,  }\item[{}]{ys,  }\item[{}]{ps,  }\item[{}]{batch }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Augment event sequence with horizontal, vertical, and polarity flips.
+:return xs: [N] tensor with event x location
+:return ys: [N] tensor with event y location
+:return ps: [N] tensor with event polarity ([-1, 1])
+:param batch: batch index
+:return xs: [N] tensor with augmented event x location
+:return ys: [N] tensor with augmented event y location
+:return ps: [N] tensor with augmented event polarity ([-1, 1])
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classdataloader_1_1base_1_1BaseDataLoader_a5bbebd6f2408bff90dfa87606ca790f9}\label{classdataloader_1_1base_1_1BaseDataLoader_a5bbebd6f2408bff90dfa87606ca790f9}} 
+\index{dataloader.base.BaseDataLoader@{dataloader.base.BaseDataLoader}!augment\_flowmap@{augment\_flowmap}}
+\index{augment\_flowmap@{augment\_flowmap}!dataloader.base.BaseDataLoader@{dataloader.base.BaseDataLoader}}
+\doxysubsubsection{\texorpdfstring{augment\_flowmap()}{augment\_flowmap()}}
+{\footnotesize\ttfamily def dataloader.\+base.\+Base\+Data\+Loader.\+augment\+\_\+flowmap (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{flowmap,  }\item[{}]{batch }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Augment ground-truth optical flow map with horizontal and vertical flips.
+:param flowmap: [2 x H x W] numpy array with ground-truth (x, y) optical flow
+:param batch: batch index
+:return flowmap: [2 x H x W] augmented numpy array with ground-truth (x, y) optical flow
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classdataloader_1_1base_1_1BaseDataLoader_a8482bc6c005fb4a2211ff5c196c2c3f6}\label{classdataloader_1_1base_1_1BaseDataLoader_a8482bc6c005fb4a2211ff5c196c2c3f6}} 
+\index{dataloader.base.BaseDataLoader@{dataloader.base.BaseDataLoader}!augment\_frames@{augment\_frames}}
+\index{augment\_frames@{augment\_frames}!dataloader.base.BaseDataLoader@{dataloader.base.BaseDataLoader}}
+\doxysubsubsection{\texorpdfstring{augment\_frames()}{augment\_frames()}}
+{\footnotesize\ttfamily def dataloader.\+base.\+Base\+Data\+Loader.\+augment\+\_\+frames (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{img,  }\item[{}]{batch }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Augment APS frame with horizontal and vertical flips.
+:param img: [H x W] numpy array with APS intensity
+:param batch: batch index
+:return img: [H x W] augmented numpy array with APS intensity
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classdataloader_1_1base_1_1BaseDataLoader_a5a13c54e74f71ac31889ba3924673cf3}\label{classdataloader_1_1base_1_1BaseDataLoader_a5a13c54e74f71ac31889ba3924673cf3}} 
+\index{dataloader.base.BaseDataLoader@{dataloader.base.BaseDataLoader}!create\_cnt\_encoding@{create\_cnt\_encoding}}
+\index{create\_cnt\_encoding@{create\_cnt\_encoding}!dataloader.base.BaseDataLoader@{dataloader.base.BaseDataLoader}}
+\doxysubsubsection{\texorpdfstring{create\_cnt\_encoding()}{create\_cnt\_encoding()}}
+{\footnotesize\ttfamily def dataloader.\+base.\+Base\+Data\+Loader.\+create\+\_\+cnt\+\_\+encoding (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{xs,  }\item[{}]{ys,  }\item[{}]{ps }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Creates a per-pixel and per-polarity event count and average timestamp representation.
+:param xs: [N] tensor with event x location
+:param ys: [N] tensor with event y location
+:param ps: [N] tensor with event polarity ([-1, 1])
+:return [2 x H x W] event representation
+\end{DoxyVerb}
+ Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classdataloader_1_1base_1_1BaseDataLoader_a5a13c54e74f71ac31889ba3924673cf3_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classdataloader_1_1base_1_1BaseDataLoader_a1c6c5baf8d694f7079f8a751d18b1c85}\label{classdataloader_1_1base_1_1BaseDataLoader_a1c6c5baf8d694f7079f8a751d18b1c85}} 
+\index{dataloader.base.BaseDataLoader@{dataloader.base.BaseDataLoader}!create\_hot\_mask@{create\_hot\_mask}}
+\index{create\_hot\_mask@{create\_hot\_mask}!dataloader.base.BaseDataLoader@{dataloader.base.BaseDataLoader}}
+\doxysubsubsection{\texorpdfstring{create\_hot\_mask()}{create\_hot\_mask()}}
+{\footnotesize\ttfamily def dataloader.\+base.\+Base\+Data\+Loader.\+create\+\_\+hot\+\_\+mask (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{event\+\_\+cnt,  }\item[{}]{batch }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Creates a one channel tensor that can act as mask to remove pixel with high event rate.
+:param xs: [N] tensor with event x location
+:param ys: [N] tensor with event y location
+:param ps: [N] tensor with event polarity ([-1, 1])
+:return [H x W] binary mask
+\end{DoxyVerb}
+ Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classdataloader_1_1base_1_1BaseDataLoader_a1c6c5baf8d694f7079f8a751d18b1c85_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classdataloader_1_1base_1_1BaseDataLoader_a1c1006c726d5eddd1b87858f265faade}\label{classdataloader_1_1base_1_1BaseDataLoader_a1c1006c726d5eddd1b87858f265faade}} 
+\index{dataloader.base.BaseDataLoader@{dataloader.base.BaseDataLoader}!create\_list\_encoding@{create\_list\_encoding}}
+\index{create\_list\_encoding@{create\_list\_encoding}!dataloader.base.BaseDataLoader@{dataloader.base.BaseDataLoader}}
+\doxysubsubsection{\texorpdfstring{create\_list\_encoding()}{create\_list\_encoding()}}
+{\footnotesize\ttfamily def dataloader.\+base.\+Base\+Data\+Loader.\+create\+\_\+list\+\_\+encoding (\begin{DoxyParamCaption}\item[{}]{xs,  }\item[{}]{ys,  }\item[{}]{ts,  }\item[{}]{ps }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\begin{DoxyVerb}Creates a four channel tensor with all the events in the input partition.
+:param xs: [N] tensor with event x location
+:param ys: [N] tensor with event y location
+:param ts: [N] tensor with normalized event timestamp
+:param ps: [N] tensor with event polarity ([-1, 1])
+:return [N x 4] event representation
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classdataloader_1_1base_1_1BaseDataLoader_a5cd2e5013a0668efc96fe580919b4e5a}\label{classdataloader_1_1base_1_1BaseDataLoader_a5cd2e5013a0668efc96fe580919b4e5a}} 
+\index{dataloader.base.BaseDataLoader@{dataloader.base.BaseDataLoader}!create\_mask\_encoding@{create\_mask\_encoding}}
+\index{create\_mask\_encoding@{create\_mask\_encoding}!dataloader.base.BaseDataLoader@{dataloader.base.BaseDataLoader}}
+\doxysubsubsection{\texorpdfstring{create\_mask\_encoding()}{create\_mask\_encoding()}}
+{\footnotesize\ttfamily def dataloader.\+base.\+Base\+Data\+Loader.\+create\+\_\+mask\+\_\+encoding (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{xs,  }\item[{}]{ys,  }\item[{}]{ps }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Creates a per-pixel and per-polarity event count and average timestamp representation.
+:param xs: [N] tensor with event x location
+:param ys: [N] tensor with event y location
+:param ps: [N] tensor with event polarity ([-1, 1])
+:return [1 x H x W] event representation
+\end{DoxyVerb}
+ Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classdataloader_1_1base_1_1BaseDataLoader_a5cd2e5013a0668efc96fe580919b4e5a_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classdataloader_1_1base_1_1BaseDataLoader_a144c3093d58d6167743d20e11a17cc9c}\label{classdataloader_1_1base_1_1BaseDataLoader_a144c3093d58d6167743d20e11a17cc9c}} 
+\index{dataloader.base.BaseDataLoader@{dataloader.base.BaseDataLoader}!create\_polarity\_mask@{create\_polarity\_mask}}
+\index{create\_polarity\_mask@{create\_polarity\_mask}!dataloader.base.BaseDataLoader@{dataloader.base.BaseDataLoader}}
+\doxysubsubsection{\texorpdfstring{create\_polarity\_mask()}{create\_polarity\_mask()}}
+{\footnotesize\ttfamily def dataloader.\+base.\+Base\+Data\+Loader.\+create\+\_\+polarity\+\_\+mask (\begin{DoxyParamCaption}\item[{}]{ps }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\begin{DoxyVerb}Creates a two channel tensor that acts as a mask for the input event list.
+:param ps: [N] tensor with event polarity ([-1, 1])
+:return [N x 2] event representation
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classdataloader_1_1base_1_1BaseDataLoader_ae8c4a65aa30b2d27da08aec77e8c231c}\label{classdataloader_1_1base_1_1BaseDataLoader_ae8c4a65aa30b2d27da08aec77e8c231c}} 
+\index{dataloader.base.BaseDataLoader@{dataloader.base.BaseDataLoader}!create\_voxel\_encoding@{create\_voxel\_encoding}}
+\index{create\_voxel\_encoding@{create\_voxel\_encoding}!dataloader.base.BaseDataLoader@{dataloader.base.BaseDataLoader}}
+\doxysubsubsection{\texorpdfstring{create\_voxel\_encoding()}{create\_voxel\_encoding()}}
+{\footnotesize\ttfamily def dataloader.\+base.\+Base\+Data\+Loader.\+create\+\_\+voxel\+\_\+encoding (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{xs,  }\item[{}]{ys,  }\item[{}]{ts,  }\item[{}]{ps }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Creates a spatiotemporal voxel grid tensor representation with a certain number of bins,
+as described in Section 3.1 of the paper 'Unsupervised Event-based Learning of Optical Flow,
+Depth, and Egomotion', Zhu et al., CVPR'19..
+Events are distributed to the spatiotemporal closest bins through bilinear interpolation.
+Positive events are added as +1, while negative as -1.
+:param xs: [N] tensor with event x location
+:param ys: [N] tensor with event y location
+:param ts: [N] tensor with normalized event timestamp
+:param ps: [N] tensor with event polarity ([-1, 1])
+:return [B x H x W] event representation
+\end{DoxyVerb}
+ Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classdataloader_1_1base_1_1BaseDataLoader_ae8c4a65aa30b2d27da08aec77e8c231c_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classdataloader_1_1base_1_1BaseDataLoader_ae83441fad773f9743214ae57b3714665}\label{classdataloader_1_1base_1_1BaseDataLoader_ae83441fad773f9743214ae57b3714665}} 
+\index{dataloader.base.BaseDataLoader@{dataloader.base.BaseDataLoader}!custom\_collate@{custom\_collate}}
+\index{custom\_collate@{custom\_collate}!dataloader.base.BaseDataLoader@{dataloader.base.BaseDataLoader}}
+\doxysubsubsection{\texorpdfstring{custom\_collate()}{custom\_collate()}}
+{\footnotesize\ttfamily def dataloader.\+base.\+Base\+Data\+Loader.\+custom\+\_\+collate (\begin{DoxyParamCaption}\item[{}]{batch }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\begin{DoxyVerb}Collects the different event representations and stores them together in a dictionary.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classdataloader_1_1base_1_1BaseDataLoader_a596767ceeb324208c16cf0d24303c17c}\label{classdataloader_1_1base_1_1BaseDataLoader_a596767ceeb324208c16cf0d24303c17c}} 
+\index{dataloader.base.BaseDataLoader@{dataloader.base.BaseDataLoader}!event\_formatting@{event\_formatting}}
+\index{event\_formatting@{event\_formatting}!dataloader.base.BaseDataLoader@{dataloader.base.BaseDataLoader}}
+\doxysubsubsection{\texorpdfstring{event\_formatting()}{event\_formatting()}}
+{\footnotesize\ttfamily def dataloader.\+base.\+Base\+Data\+Loader.\+event\+\_\+formatting (\begin{DoxyParamCaption}\item[{}]{xs,  }\item[{}]{ys,  }\item[{}]{ts,  }\item[{}]{ps }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\begin{DoxyVerb}Reset sequence-specific variables.
+:param xs: [N] numpy array with event x location
+:param ys: [N] numpy array with event y location
+:param ts: [N] numpy array with event timestamp
+:param ps: [N] numpy array with event polarity ([-1, 1])
+:return xs: [N] tensor with event x location
+:return ys: [N] tensor with event y location
+:return ts: [N] tensor with normalized event timestamp
+:return ps: [N] tensor with event polarity ([-1, 1])
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classdataloader_1_1base_1_1BaseDataLoader_a53bda9558a28b495ecaa2eac95f89c7b}\label{classdataloader_1_1base_1_1BaseDataLoader_a53bda9558a28b495ecaa2eac95f89c7b}} 
+\index{dataloader.base.BaseDataLoader@{dataloader.base.BaseDataLoader}!get\_events@{get\_events}}
+\index{get\_events@{get\_events}!dataloader.base.BaseDataLoader@{dataloader.base.BaseDataLoader}}
+\doxysubsubsection{\texorpdfstring{get\_events()}{get\_events()}}
+{\footnotesize\ttfamily def dataloader.\+base.\+Base\+Data\+Loader.\+get\+\_\+events (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{history }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classdataloader_1_1base_1_1BaseDataLoader_a81d001747266cdfedfb9c26809bf29bb}\label{classdataloader_1_1base_1_1BaseDataLoader_a81d001747266cdfedfb9c26809bf29bb}} 
+\index{dataloader.base.BaseDataLoader@{dataloader.base.BaseDataLoader}!reset\_sequence@{reset\_sequence}}
+\index{reset\_sequence@{reset\_sequence}!dataloader.base.BaseDataLoader@{dataloader.base.BaseDataLoader}}
+\doxysubsubsection{\texorpdfstring{reset\_sequence()}{reset\_sequence()}}
+{\footnotesize\ttfamily def dataloader.\+base.\+Base\+Data\+Loader.\+reset\+\_\+sequence (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{batch }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Reset sequence-specific variables.
+:param batch: batch index
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classdataloader_1_1base_1_1BaseDataLoader_ae19266cc1bc3efc011b25b61ca2f138b}\label{classdataloader_1_1base_1_1BaseDataLoader_ae19266cc1bc3efc011b25b61ca2f138b}} 
+\index{dataloader.base.BaseDataLoader@{dataloader.base.BaseDataLoader}!shuffle@{shuffle}}
+\index{shuffle@{shuffle}!dataloader.base.BaseDataLoader@{dataloader.base.BaseDataLoader}}
+\doxysubsubsection{\texorpdfstring{shuffle()}{shuffle()}}
+{\footnotesize\ttfamily def dataloader.\+base.\+Base\+Data\+Loader.\+shuffle (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{flag = {\ttfamily True} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Shuffles the training data.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classdataloader_1_1base_1_1BaseDataLoader_a99dfb2ccca523a8a5e4c43abc96d71a6}\label{classdataloader_1_1base_1_1BaseDataLoader_a99dfb2ccca523a8a5e4c43abc96d71a6}} 
+\index{dataloader.base.BaseDataLoader@{dataloader.base.BaseDataLoader}!batch\_augmentation@{batch\_augmentation}}
+\index{batch\_augmentation@{batch\_augmentation}!dataloader.base.BaseDataLoader@{dataloader.base.BaseDataLoader}}
+\doxysubsubsection{\texorpdfstring{batch\_augmentation}{batch\_augmentation}}
+{\footnotesize\ttfamily dataloader.\+base.\+Base\+Data\+Loader.\+batch\+\_\+augmentation}
+
+\mbox{\Hypertarget{classdataloader_1_1base_1_1BaseDataLoader_a35b51f2263a8b217d96be00f6c88966d}\label{classdataloader_1_1base_1_1BaseDataLoader_a35b51f2263a8b217d96be00f6c88966d}} 
+\index{dataloader.base.BaseDataLoader@{dataloader.base.BaseDataLoader}!config@{config}}
+\index{config@{config}!dataloader.base.BaseDataLoader@{dataloader.base.BaseDataLoader}}
+\doxysubsubsection{\texorpdfstring{config}{config}}
+{\footnotesize\ttfamily dataloader.\+base.\+Base\+Data\+Loader.\+config}
+
+\mbox{\Hypertarget{classdataloader_1_1base_1_1BaseDataLoader_af31cbf9ad1def1461e1f5a95c8b5e581}\label{classdataloader_1_1base_1_1BaseDataLoader_af31cbf9ad1def1461e1f5a95c8b5e581}} 
+\index{dataloader.base.BaseDataLoader@{dataloader.base.BaseDataLoader}!epoch@{epoch}}
+\index{epoch@{epoch}!dataloader.base.BaseDataLoader@{dataloader.base.BaseDataLoader}}
+\doxysubsubsection{\texorpdfstring{epoch}{epoch}}
+{\footnotesize\ttfamily dataloader.\+base.\+Base\+Data\+Loader.\+epoch}
+
+\mbox{\Hypertarget{classdataloader_1_1base_1_1BaseDataLoader_af9dbdb3bfb24b2ebfff304df2a482cdb}\label{classdataloader_1_1base_1_1BaseDataLoader_af9dbdb3bfb24b2ebfff304df2a482cdb}} 
+\index{dataloader.base.BaseDataLoader@{dataloader.base.BaseDataLoader}!hot\_events@{hot\_events}}
+\index{hot\_events@{hot\_events}!dataloader.base.BaseDataLoader@{dataloader.base.BaseDataLoader}}
+\doxysubsubsection{\texorpdfstring{hot\_events}{hot\_events}}
+{\footnotesize\ttfamily dataloader.\+base.\+Base\+Data\+Loader.\+hot\+\_\+events}
+
+\mbox{\Hypertarget{classdataloader_1_1base_1_1BaseDataLoader_a1c02ba890faa3a5e038f08ef69a62083}\label{classdataloader_1_1base_1_1BaseDataLoader_a1c02ba890faa3a5e038f08ef69a62083}} 
+\index{dataloader.base.BaseDataLoader@{dataloader.base.BaseDataLoader}!hot\_idx@{hot\_idx}}
+\index{hot\_idx@{hot\_idx}!dataloader.base.BaseDataLoader@{dataloader.base.BaseDataLoader}}
+\doxysubsubsection{\texorpdfstring{hot\_idx}{hot\_idx}}
+{\footnotesize\ttfamily dataloader.\+base.\+Base\+Data\+Loader.\+hot\+\_\+idx}
+
+\mbox{\Hypertarget{classdataloader_1_1base_1_1BaseDataLoader_aa127b784f31cb78385a660da60f01faa}\label{classdataloader_1_1base_1_1BaseDataLoader_aa127b784f31cb78385a660da60f01faa}} 
+\index{dataloader.base.BaseDataLoader@{dataloader.base.BaseDataLoader}!new\_seq@{new\_seq}}
+\index{new\_seq@{new\_seq}!dataloader.base.BaseDataLoader@{dataloader.base.BaseDataLoader}}
+\doxysubsubsection{\texorpdfstring{new\_seq}{new\_seq}}
+{\footnotesize\ttfamily dataloader.\+base.\+Base\+Data\+Loader.\+new\+\_\+seq}
+
+\mbox{\Hypertarget{classdataloader_1_1base_1_1BaseDataLoader_ad04658aa67476b860491d5eba65f9acc}\label{classdataloader_1_1base_1_1BaseDataLoader_ad04658aa67476b860491d5eba65f9acc}} 
+\index{dataloader.base.BaseDataLoader@{dataloader.base.BaseDataLoader}!num\_bins@{num\_bins}}
+\index{num\_bins@{num\_bins}!dataloader.base.BaseDataLoader@{dataloader.base.BaseDataLoader}}
+\doxysubsubsection{\texorpdfstring{num\_bins}{num\_bins}}
+{\footnotesize\ttfamily dataloader.\+base.\+Base\+Data\+Loader.\+num\+\_\+bins}
+
+\mbox{\Hypertarget{classdataloader_1_1base_1_1BaseDataLoader_a7587215d98c437efecf9892767c5d062}\label{classdataloader_1_1base_1_1BaseDataLoader_a7587215d98c437efecf9892767c5d062}} 
+\index{dataloader.base.BaseDataLoader@{dataloader.base.BaseDataLoader}!round\_encoding@{round\_encoding}}
+\index{round\_encoding@{round\_encoding}!dataloader.base.BaseDataLoader@{dataloader.base.BaseDataLoader}}
+\doxysubsubsection{\texorpdfstring{round\_encoding}{round\_encoding}}
+{\footnotesize\ttfamily dataloader.\+base.\+Base\+Data\+Loader.\+round\+\_\+encoding}
+
+\mbox{\Hypertarget{classdataloader_1_1base_1_1BaseDataLoader_ac86d34f08046b88e24a0ad600b83e98f}\label{classdataloader_1_1base_1_1BaseDataLoader_ac86d34f08046b88e24a0ad600b83e98f}} 
+\index{dataloader.base.BaseDataLoader@{dataloader.base.BaseDataLoader}!samples@{samples}}
+\index{samples@{samples}!dataloader.base.BaseDataLoader@{dataloader.base.BaseDataLoader}}
+\doxysubsubsection{\texorpdfstring{samples}{samples}}
+{\footnotesize\ttfamily dataloader.\+base.\+Base\+Data\+Loader.\+samples}
+
+\mbox{\Hypertarget{classdataloader_1_1base_1_1BaseDataLoader_a0b80298ffe49a01a515dc3c90eb7424c}\label{classdataloader_1_1base_1_1BaseDataLoader_a0b80298ffe49a01a515dc3c90eb7424c}} 
+\index{dataloader.base.BaseDataLoader@{dataloader.base.BaseDataLoader}!seq\_num@{seq\_num}}
+\index{seq\_num@{seq\_num}!dataloader.base.BaseDataLoader@{dataloader.base.BaseDataLoader}}
+\doxysubsubsection{\texorpdfstring{seq\_num}{seq\_num}}
+{\footnotesize\ttfamily dataloader.\+base.\+Base\+Data\+Loader.\+seq\+\_\+num}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{base_8py}{base.\+py}}\end{DoxyCompactItemize}

@@ -1,0 +1,231 @@
+\hypertarget{classloss_1_1flow_1_1BaseValidationLoss}{}\doxysection{loss.\+flow.\+Base\+Validation\+Loss Class Reference}
+\label{classloss_1_1flow_1_1BaseValidationLoss}\index{loss.flow.BaseValidationLoss@{loss.flow.BaseValidationLoss}}
+
+
+Inheritance diagram for loss.\+flow.\+Base\+Validation\+Loss\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classloss_1_1flow_1_1BaseValidationLoss__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for loss.\+flow.\+Base\+Validation\+Loss\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=236pt]{classloss_1_1flow_1_1BaseValidationLoss__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classloss_1_1flow_1_1BaseValidationLoss_a04906883e47d86df5074030c7295b25a}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, config, \mbox{\hyperlink{classloss_1_1flow_1_1BaseValidationLoss_ab87b468be6db01ff2484d73e80c4206b}{device}}, \mbox{\hyperlink{classloss_1_1flow_1_1BaseValidationLoss_aa61a86979532e52c3c1d0c08a7d0acc8}{flow\+\_\+scaling}}=128)
+\item 
+def \mbox{\hyperlink{classloss_1_1flow_1_1BaseValidationLoss_af92d399f575ce7e0071ca67541e91030}{num\+\_\+events}} (self)
+\item 
+def \mbox{\hyperlink{classloss_1_1flow_1_1BaseValidationLoss_aca2181ec4517fce52c6e379d089f2c1f}{event\+\_\+flow\+\_\+association}} (self, flow\+\_\+list, inputs)
+\item 
+def \mbox{\hyperlink{classloss_1_1flow_1_1BaseValidationLoss_ad4fb70c5e9aa59b83c4d351e017ea591}{overwrite\+\_\+intermediate\+\_\+flow}} (self, flow\+\_\+list)
+\item 
+def \mbox{\hyperlink{classloss_1_1flow_1_1BaseValidationLoss_aa1be19708d0bf87ccb9c118cdb187ec7}{reset}} (self)
+\item 
+def \mbox{\hyperlink{classloss_1_1flow_1_1BaseValidationLoss_add732e85956778e8dded299f4c51691d}{compute\+\_\+window\+\_\+events}} (self)
+\item 
+def \mbox{\hyperlink{classloss_1_1flow_1_1BaseValidationLoss_a62dc5dc008c30ef4dd5f7ef0ac43d189}{compute\+\_\+masked\+\_\+window\+\_\+flow}} (self)
+\item 
+def \mbox{\hyperlink{classloss_1_1flow_1_1BaseValidationLoss_a76fac224ffccb8cfbe19493204f66e48}{compute\+\_\+window\+\_\+iwe}} (self, round\+\_\+idx=True)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classloss_1_1flow_1_1BaseValidationLoss_ac7d4d53d5e9fef2978ebd179af4246a0}{res}}
+\item 
+\mbox{\hyperlink{classloss_1_1flow_1_1BaseValidationLoss_aa61a86979532e52c3c1d0c08a7d0acc8}{flow\+\_\+scaling}}
+\item 
+\mbox{\hyperlink{classloss_1_1flow_1_1BaseValidationLoss_ad8f473f4a601c61a009e33a491338fe4}{overwrite\+\_\+intermediate}}
+\item 
+\mbox{\hyperlink{classloss_1_1flow_1_1BaseValidationLoss_ab87b468be6db01ff2484d73e80c4206b}{device}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classloss_1_1flow_1_1BaseValidationLoss_a4a0460b4cefef70f7251c4fabdf199c4}{\+\_\+passes}}
+\item 
+\mbox{\hyperlink{classloss_1_1flow_1_1BaseValidationLoss_aec55d869a0a29f85a2e20ea6beae29f8}{\+\_\+event\+\_\+list}}
+\item 
+\mbox{\hyperlink{classloss_1_1flow_1_1BaseValidationLoss_a1ccd43e32fe11a2cd59f1e4440ba21d0}{\+\_\+flow\+\_\+list}}
+\item 
+\mbox{\hyperlink{classloss_1_1flow_1_1BaseValidationLoss_a0ababbc4ea5c826b45ae14332253d659}{\+\_\+flow\+\_\+map}}
+\item 
+\mbox{\hyperlink{classloss_1_1flow_1_1BaseValidationLoss_a183be6697b5f208e0881146ac5188e3a}{\+\_\+pol\+\_\+mask\+\_\+list}}
+\item 
+\mbox{\hyperlink{classloss_1_1flow_1_1BaseValidationLoss_a88f7ef392730d54967666ee7e39b5f2e}{\+\_\+event\+\_\+mask}}
+\item 
+\mbox{\hyperlink{classloss_1_1flow_1_1BaseValidationLoss_a10619b686f5686033676cd95b037f989}{\+\_\+gtflow}}
+\item 
+\mbox{\hyperlink{classloss_1_1flow_1_1BaseValidationLoss_a9d7b4e689d211ca873f9757fe3332d67}{\+\_\+dt\+\_\+input}}
+\item 
+\mbox{\hyperlink{classloss_1_1flow_1_1BaseValidationLoss_a322517f08a8f9127b89295c5e3b614e6}{\+\_\+dt\+\_\+gt}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Base class for validation metrics.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classloss_1_1flow_1_1BaseValidationLoss_a04906883e47d86df5074030c7295b25a}\label{classloss_1_1flow_1_1BaseValidationLoss_a04906883e47d86df5074030c7295b25a}} 
+\index{loss.flow.BaseValidationLoss@{loss.flow.BaseValidationLoss}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!loss.flow.BaseValidationLoss@{loss.flow.BaseValidationLoss}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def loss.\+flow.\+Base\+Validation\+Loss.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{config,  }\item[{}]{device,  }\item[{}]{flow\+\_\+scaling = {\ttfamily 128} }\end{DoxyParamCaption})}
+
+
+
+Reimplemented in \mbox{\hyperlink{classloss_1_1flow_1_1AEE_a3b7708be400370aded2dbc40a1d5e2e8}{loss.\+flow.\+A\+EE}}, \mbox{\hyperlink{classloss_1_1flow_1_1RSAT_ae0185edb62d2c5b8761fcf28a9948986}{loss.\+flow.\+R\+S\+AT}}, and \mbox{\hyperlink{classloss_1_1flow_1_1FWL_aa7539014adca94c51de7cd29b4e7d75b}{loss.\+flow.\+F\+WL}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classloss_1_1flow_1_1BaseValidationLoss_a62dc5dc008c30ef4dd5f7ef0ac43d189}\label{classloss_1_1flow_1_1BaseValidationLoss_a62dc5dc008c30ef4dd5f7ef0ac43d189}} 
+\index{loss.flow.BaseValidationLoss@{loss.flow.BaseValidationLoss}!compute\_masked\_window\_flow@{compute\_masked\_window\_flow}}
+\index{compute\_masked\_window\_flow@{compute\_masked\_window\_flow}!loss.flow.BaseValidationLoss@{loss.flow.BaseValidationLoss}}
+\doxysubsubsection{\texorpdfstring{compute\_masked\_window\_flow()}{compute\_masked\_window\_flow()}}
+{\footnotesize\ttfamily def loss.\+flow.\+Base\+Validation\+Loss.\+compute\+\_\+masked\+\_\+window\+\_\+flow (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classloss_1_1flow_1_1BaseValidationLoss_add732e85956778e8dded299f4c51691d}\label{classloss_1_1flow_1_1BaseValidationLoss_add732e85956778e8dded299f4c51691d}} 
+\index{loss.flow.BaseValidationLoss@{loss.flow.BaseValidationLoss}!compute\_window\_events@{compute\_window\_events}}
+\index{compute\_window\_events@{compute\_window\_events}!loss.flow.BaseValidationLoss@{loss.flow.BaseValidationLoss}}
+\doxysubsubsection{\texorpdfstring{compute\_window\_events()}{compute\_window\_events()}}
+{\footnotesize\ttfamily def loss.\+flow.\+Base\+Validation\+Loss.\+compute\+\_\+window\+\_\+events (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classloss_1_1flow_1_1BaseValidationLoss_a76fac224ffccb8cfbe19493204f66e48}\label{classloss_1_1flow_1_1BaseValidationLoss_a76fac224ffccb8cfbe19493204f66e48}} 
+\index{loss.flow.BaseValidationLoss@{loss.flow.BaseValidationLoss}!compute\_window\_iwe@{compute\_window\_iwe}}
+\index{compute\_window\_iwe@{compute\_window\_iwe}!loss.flow.BaseValidationLoss@{loss.flow.BaseValidationLoss}}
+\doxysubsubsection{\texorpdfstring{compute\_window\_iwe()}{compute\_window\_iwe()}}
+{\footnotesize\ttfamily def loss.\+flow.\+Base\+Validation\+Loss.\+compute\+\_\+window\+\_\+iwe (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{round\+\_\+idx = {\ttfamily True} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classloss_1_1flow_1_1BaseValidationLoss_aca2181ec4517fce52c6e379d089f2c1f}\label{classloss_1_1flow_1_1BaseValidationLoss_aca2181ec4517fce52c6e379d089f2c1f}} 
+\index{loss.flow.BaseValidationLoss@{loss.flow.BaseValidationLoss}!event\_flow\_association@{event\_flow\_association}}
+\index{event\_flow\_association@{event\_flow\_association}!loss.flow.BaseValidationLoss@{loss.flow.BaseValidationLoss}}
+\doxysubsubsection{\texorpdfstring{event\_flow\_association()}{event\_flow\_association()}}
+{\footnotesize\ttfamily def loss.\+flow.\+Base\+Validation\+Loss.\+event\+\_\+flow\+\_\+association (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{flow\+\_\+list,  }\item[{}]{inputs }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}:param flow_list: [[batch_size x 2 x H x W]] list of optical flow (x, y) maps
+:param inputs: dataloader dictionary
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classloss_1_1flow_1_1BaseValidationLoss_af92d399f575ce7e0071ca67541e91030}\label{classloss_1_1flow_1_1BaseValidationLoss_af92d399f575ce7e0071ca67541e91030}} 
+\index{loss.flow.BaseValidationLoss@{loss.flow.BaseValidationLoss}!num\_events@{num\_events}}
+\index{num\_events@{num\_events}!loss.flow.BaseValidationLoss@{loss.flow.BaseValidationLoss}}
+\doxysubsubsection{\texorpdfstring{num\_events()}{num\_events()}}
+{\footnotesize\ttfamily def loss.\+flow.\+Base\+Validation\+Loss.\+num\+\_\+events (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Reimplemented in \mbox{\hyperlink{classloss_1_1flow_1_1AEE_a72720def690b43afa9bb23a073b6909b}{loss.\+flow.\+A\+EE}}.
+
+\mbox{\Hypertarget{classloss_1_1flow_1_1BaseValidationLoss_ad4fb70c5e9aa59b83c4d351e017ea591}\label{classloss_1_1flow_1_1BaseValidationLoss_ad4fb70c5e9aa59b83c4d351e017ea591}} 
+\index{loss.flow.BaseValidationLoss@{loss.flow.BaseValidationLoss}!overwrite\_intermediate\_flow@{overwrite\_intermediate\_flow}}
+\index{overwrite\_intermediate\_flow@{overwrite\_intermediate\_flow}!loss.flow.BaseValidationLoss@{loss.flow.BaseValidationLoss}}
+\doxysubsubsection{\texorpdfstring{overwrite\_intermediate\_flow()}{overwrite\_intermediate\_flow()}}
+{\footnotesize\ttfamily def loss.\+flow.\+Base\+Validation\+Loss.\+overwrite\+\_\+intermediate\+\_\+flow (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{flow\+\_\+list }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}:param flow_list: [[batch_size x 2 x H x W]] list of optical flow (x, y) maps
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classloss_1_1flow_1_1BaseValidationLoss_aa1be19708d0bf87ccb9c118cdb187ec7}\label{classloss_1_1flow_1_1BaseValidationLoss_aa1be19708d0bf87ccb9c118cdb187ec7}} 
+\index{loss.flow.BaseValidationLoss@{loss.flow.BaseValidationLoss}!reset@{reset}}
+\index{reset@{reset}!loss.flow.BaseValidationLoss@{loss.flow.BaseValidationLoss}}
+\doxysubsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily def loss.\+flow.\+Base\+Validation\+Loss.\+reset (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classloss_1_1flow_1_1BaseValidationLoss_a322517f08a8f9127b89295c5e3b614e6}\label{classloss_1_1flow_1_1BaseValidationLoss_a322517f08a8f9127b89295c5e3b614e6}} 
+\index{loss.flow.BaseValidationLoss@{loss.flow.BaseValidationLoss}!\_dt\_gt@{\_dt\_gt}}
+\index{\_dt\_gt@{\_dt\_gt}!loss.flow.BaseValidationLoss@{loss.flow.BaseValidationLoss}}
+\doxysubsubsection{\texorpdfstring{\_dt\_gt}{\_dt\_gt}}
+{\footnotesize\ttfamily loss.\+flow.\+Base\+Validation\+Loss.\+\_\+dt\+\_\+gt\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classloss_1_1flow_1_1BaseValidationLoss_a9d7b4e689d211ca873f9757fe3332d67}\label{classloss_1_1flow_1_1BaseValidationLoss_a9d7b4e689d211ca873f9757fe3332d67}} 
+\index{loss.flow.BaseValidationLoss@{loss.flow.BaseValidationLoss}!\_dt\_input@{\_dt\_input}}
+\index{\_dt\_input@{\_dt\_input}!loss.flow.BaseValidationLoss@{loss.flow.BaseValidationLoss}}
+\doxysubsubsection{\texorpdfstring{\_dt\_input}{\_dt\_input}}
+{\footnotesize\ttfamily loss.\+flow.\+Base\+Validation\+Loss.\+\_\+dt\+\_\+input\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classloss_1_1flow_1_1BaseValidationLoss_aec55d869a0a29f85a2e20ea6beae29f8}\label{classloss_1_1flow_1_1BaseValidationLoss_aec55d869a0a29f85a2e20ea6beae29f8}} 
+\index{loss.flow.BaseValidationLoss@{loss.flow.BaseValidationLoss}!\_event\_list@{\_event\_list}}
+\index{\_event\_list@{\_event\_list}!loss.flow.BaseValidationLoss@{loss.flow.BaseValidationLoss}}
+\doxysubsubsection{\texorpdfstring{\_event\_list}{\_event\_list}}
+{\footnotesize\ttfamily loss.\+flow.\+Base\+Validation\+Loss.\+\_\+event\+\_\+list\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classloss_1_1flow_1_1BaseValidationLoss_a88f7ef392730d54967666ee7e39b5f2e}\label{classloss_1_1flow_1_1BaseValidationLoss_a88f7ef392730d54967666ee7e39b5f2e}} 
+\index{loss.flow.BaseValidationLoss@{loss.flow.BaseValidationLoss}!\_event\_mask@{\_event\_mask}}
+\index{\_event\_mask@{\_event\_mask}!loss.flow.BaseValidationLoss@{loss.flow.BaseValidationLoss}}
+\doxysubsubsection{\texorpdfstring{\_event\_mask}{\_event\_mask}}
+{\footnotesize\ttfamily loss.\+flow.\+Base\+Validation\+Loss.\+\_\+event\+\_\+mask\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classloss_1_1flow_1_1BaseValidationLoss_a1ccd43e32fe11a2cd59f1e4440ba21d0}\label{classloss_1_1flow_1_1BaseValidationLoss_a1ccd43e32fe11a2cd59f1e4440ba21d0}} 
+\index{loss.flow.BaseValidationLoss@{loss.flow.BaseValidationLoss}!\_flow\_list@{\_flow\_list}}
+\index{\_flow\_list@{\_flow\_list}!loss.flow.BaseValidationLoss@{loss.flow.BaseValidationLoss}}
+\doxysubsubsection{\texorpdfstring{\_flow\_list}{\_flow\_list}}
+{\footnotesize\ttfamily loss.\+flow.\+Base\+Validation\+Loss.\+\_\+flow\+\_\+list\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classloss_1_1flow_1_1BaseValidationLoss_a0ababbc4ea5c826b45ae14332253d659}\label{classloss_1_1flow_1_1BaseValidationLoss_a0ababbc4ea5c826b45ae14332253d659}} 
+\index{loss.flow.BaseValidationLoss@{loss.flow.BaseValidationLoss}!\_flow\_map@{\_flow\_map}}
+\index{\_flow\_map@{\_flow\_map}!loss.flow.BaseValidationLoss@{loss.flow.BaseValidationLoss}}
+\doxysubsubsection{\texorpdfstring{\_flow\_map}{\_flow\_map}}
+{\footnotesize\ttfamily loss.\+flow.\+Base\+Validation\+Loss.\+\_\+flow\+\_\+map\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classloss_1_1flow_1_1BaseValidationLoss_a10619b686f5686033676cd95b037f989}\label{classloss_1_1flow_1_1BaseValidationLoss_a10619b686f5686033676cd95b037f989}} 
+\index{loss.flow.BaseValidationLoss@{loss.flow.BaseValidationLoss}!\_gtflow@{\_gtflow}}
+\index{\_gtflow@{\_gtflow}!loss.flow.BaseValidationLoss@{loss.flow.BaseValidationLoss}}
+\doxysubsubsection{\texorpdfstring{\_gtflow}{\_gtflow}}
+{\footnotesize\ttfamily loss.\+flow.\+Base\+Validation\+Loss.\+\_\+gtflow\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classloss_1_1flow_1_1BaseValidationLoss_a4a0460b4cefef70f7251c4fabdf199c4}\label{classloss_1_1flow_1_1BaseValidationLoss_a4a0460b4cefef70f7251c4fabdf199c4}} 
+\index{loss.flow.BaseValidationLoss@{loss.flow.BaseValidationLoss}!\_passes@{\_passes}}
+\index{\_passes@{\_passes}!loss.flow.BaseValidationLoss@{loss.flow.BaseValidationLoss}}
+\doxysubsubsection{\texorpdfstring{\_passes}{\_passes}}
+{\footnotesize\ttfamily loss.\+flow.\+Base\+Validation\+Loss.\+\_\+passes\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classloss_1_1flow_1_1BaseValidationLoss_a183be6697b5f208e0881146ac5188e3a}\label{classloss_1_1flow_1_1BaseValidationLoss_a183be6697b5f208e0881146ac5188e3a}} 
+\index{loss.flow.BaseValidationLoss@{loss.flow.BaseValidationLoss}!\_pol\_mask\_list@{\_pol\_mask\_list}}
+\index{\_pol\_mask\_list@{\_pol\_mask\_list}!loss.flow.BaseValidationLoss@{loss.flow.BaseValidationLoss}}
+\doxysubsubsection{\texorpdfstring{\_pol\_mask\_list}{\_pol\_mask\_list}}
+{\footnotesize\ttfamily loss.\+flow.\+Base\+Validation\+Loss.\+\_\+pol\+\_\+mask\+\_\+list\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classloss_1_1flow_1_1BaseValidationLoss_ab87b468be6db01ff2484d73e80c4206b}\label{classloss_1_1flow_1_1BaseValidationLoss_ab87b468be6db01ff2484d73e80c4206b}} 
+\index{loss.flow.BaseValidationLoss@{loss.flow.BaseValidationLoss}!device@{device}}
+\index{device@{device}!loss.flow.BaseValidationLoss@{loss.flow.BaseValidationLoss}}
+\doxysubsubsection{\texorpdfstring{device}{device}}
+{\footnotesize\ttfamily loss.\+flow.\+Base\+Validation\+Loss.\+device}
+
+\mbox{\Hypertarget{classloss_1_1flow_1_1BaseValidationLoss_aa61a86979532e52c3c1d0c08a7d0acc8}\label{classloss_1_1flow_1_1BaseValidationLoss_aa61a86979532e52c3c1d0c08a7d0acc8}} 
+\index{loss.flow.BaseValidationLoss@{loss.flow.BaseValidationLoss}!flow\_scaling@{flow\_scaling}}
+\index{flow\_scaling@{flow\_scaling}!loss.flow.BaseValidationLoss@{loss.flow.BaseValidationLoss}}
+\doxysubsubsection{\texorpdfstring{flow\_scaling}{flow\_scaling}}
+{\footnotesize\ttfamily loss.\+flow.\+Base\+Validation\+Loss.\+flow\+\_\+scaling}
+
+\mbox{\Hypertarget{classloss_1_1flow_1_1BaseValidationLoss_ad8f473f4a601c61a009e33a491338fe4}\label{classloss_1_1flow_1_1BaseValidationLoss_ad8f473f4a601c61a009e33a491338fe4}} 
+\index{loss.flow.BaseValidationLoss@{loss.flow.BaseValidationLoss}!overwrite\_intermediate@{overwrite\_intermediate}}
+\index{overwrite\_intermediate@{overwrite\_intermediate}!loss.flow.BaseValidationLoss@{loss.flow.BaseValidationLoss}}
+\doxysubsubsection{\texorpdfstring{overwrite\_intermediate}{overwrite\_intermediate}}
+{\footnotesize\ttfamily loss.\+flow.\+Base\+Validation\+Loss.\+overwrite\+\_\+intermediate}
+
+\mbox{\Hypertarget{classloss_1_1flow_1_1BaseValidationLoss_ac7d4d53d5e9fef2978ebd179af4246a0}\label{classloss_1_1flow_1_1BaseValidationLoss_ac7d4d53d5e9fef2978ebd179af4246a0}} 
+\index{loss.flow.BaseValidationLoss@{loss.flow.BaseValidationLoss}!res@{res}}
+\index{res@{res}!loss.flow.BaseValidationLoss@{loss.flow.BaseValidationLoss}}
+\doxysubsubsection{\texorpdfstring{res}{res}}
+{\footnotesize\ttfamily loss.\+flow.\+Base\+Validation\+Loss.\+res}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{flow_8py}{flow.\+py}}\end{DoxyCompactItemize}
