@@ -1,0 +1,65 @@
+\hypertarget{classloss_1_1flow_1_1RSAT}{}\doxysection{loss.\+flow.\+R\+S\+AT Class Reference}
+\label{classloss_1_1flow_1_1RSAT}\index{loss.flow.RSAT@{loss.flow.RSAT}}
+
+
+Inheritance diagram for loss.\+flow.\+R\+S\+AT\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=236pt]{classloss_1_1flow_1_1RSAT__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for loss.\+flow.\+R\+S\+AT\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=236pt]{classloss_1_1flow_1_1RSAT__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classloss_1_1flow_1_1RSAT_ae0185edb62d2c5b8761fcf28a9948986}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, config, \mbox{\hyperlink{classloss_1_1flow_1_1BaseValidationLoss_ab87b468be6db01ff2484d73e80c4206b}{device}}, \mbox{\hyperlink{classloss_1_1flow_1_1BaseValidationLoss_aa61a86979532e52c3c1d0c08a7d0acc8}{flow\+\_\+scaling}}=128)
+\item 
+def \mbox{\hyperlink{classloss_1_1flow_1_1RSAT_a349bb7780f001879e03cab1853b91434}{forward}} (self)
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Similarly to the FWL metric, the Ratio of the Squared Averaged Timestamps (RSAT) metric is the ratio of the squared sum
+of the per-pixel and per-polarity average timestamp of the image of warped events and that of
+the image of (non-warped) events; hence, the lower the value of this metric, the better the optical flow estimate.
+Note that this metric is sensitive to the number of input events.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classloss_1_1flow_1_1RSAT_ae0185edb62d2c5b8761fcf28a9948986}\label{classloss_1_1flow_1_1RSAT_ae0185edb62d2c5b8761fcf28a9948986}} 
+\index{loss.flow.RSAT@{loss.flow.RSAT}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!loss.flow.RSAT@{loss.flow.RSAT}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def loss.\+flow.\+R\+S\+A\+T.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{config,  }\item[{}]{device,  }\item[{}]{flow\+\_\+scaling = {\ttfamily 128} }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classloss_1_1flow_1_1BaseValidationLoss_a04906883e47d86df5074030c7295b25a}{loss.\+flow.\+Base\+Validation\+Loss}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classloss_1_1flow_1_1RSAT_a349bb7780f001879e03cab1853b91434}\label{classloss_1_1flow_1_1RSAT_a349bb7780f001879e03cab1853b91434}} 
+\index{loss.flow.RSAT@{loss.flow.RSAT}!forward@{forward}}
+\index{forward@{forward}!loss.flow.RSAT@{loss.flow.RSAT}}
+\doxysubsubsection{\texorpdfstring{forward()}{forward()}}
+{\footnotesize\ttfamily def loss.\+flow.\+R\+S\+A\+T.\+forward (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{flow_8py}{flow.\+py}}\end{DoxyCompactItemize}

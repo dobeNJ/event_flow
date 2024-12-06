@@ -1,6 +1,6 @@
 data:
-    path: /media/doha/SSK Drive/dataset/MVSEC_From_github/MVSEC/h5/ #/media/doha/SSK Drive/dataset/MVSEC/FLOW_GT/indoor_flying/indoor_flying1_gt_flow_dist/  #/media/doha/SSK Drive/dataset/MVSEC/ #../../../../../../media/doha/SSK Drive/dataset/MVSEC/
-    mode:  gtflow_dt1 #outdoor_night2_gt #outdoor_night3_data # gtflow_dt1/gtflow_dt4
+    path: datasets/data/MVSEC/
+    mode: gtflow_dt1 # gtflow_dt1/gtflow_dt4
     window: 1 # 1 for dt1, 0.25 for dt4
     window_eval: 15000 # not used
 

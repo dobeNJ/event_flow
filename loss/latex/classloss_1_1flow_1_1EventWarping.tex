@@ -1,0 +1,230 @@
+\hypertarget{classloss_1_1flow_1_1EventWarping}{}\doxysection{loss.\+flow.\+Event\+Warping Class Reference}
+\label{classloss_1_1flow_1_1EventWarping}\index{loss.flow.EventWarping@{loss.flow.EventWarping}}
+
+
+Inheritance diagram for loss.\+flow.\+Event\+Warping\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=209pt]{classloss_1_1flow_1_1EventWarping__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for loss.\+flow.\+Event\+Warping\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=209pt]{classloss_1_1flow_1_1EventWarping__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classloss_1_1flow_1_1EventWarping_a87bbe6708d98d41df14b39c19cc49f0e}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, config, \mbox{\hyperlink{classloss_1_1flow_1_1EventWarping_a636ef3608e2f128cef744313a4534e04}{device}}, \mbox{\hyperlink{classloss_1_1flow_1_1EventWarping_a59ed7c7fd77f4181da46dd2dc3ea298f}{flow\+\_\+scaling}}=None, \mbox{\hyperlink{classloss_1_1flow_1_1EventWarping_a9897c73efcc62ce88e705f48b3e18271}{loss\+\_\+scaling}}=True)
+\item 
+def \mbox{\hyperlink{classloss_1_1flow_1_1EventWarping_abd2d5d0d15da20e494e4088f8ff20abd}{event\+\_\+flow\+\_\+association}} (self, flow\+\_\+list, event\+\_\+list, pol\+\_\+mask, \mbox{\hyperlink{classloss_1_1flow_1_1EventWarping_a2a40c0783a29a7388f5afd7caaa4d80f}{event\+\_\+mask}})
+\item 
+def \mbox{\hyperlink{classloss_1_1flow_1_1EventWarping_a801d44210ce11c42084cfd128efd5a74}{overwrite\+\_\+intermediate\+\_\+flow}} (self, flow\+\_\+list)
+\item 
+def \mbox{\hyperlink{classloss_1_1flow_1_1EventWarping_afabd12928c884db6b895e5c1c758d898}{reset}} (self)
+\item 
+def \mbox{\hyperlink{classloss_1_1flow_1_1EventWarping_a3f3ee2c508546e54520be47b78e6d445}{num\+\_\+events}} (self)
+\item 
+def \mbox{\hyperlink{classloss_1_1flow_1_1EventWarping_a2a40c0783a29a7388f5afd7caaa4d80f}{event\+\_\+mask}} (self)
+\item 
+def \mbox{\hyperlink{classloss_1_1flow_1_1EventWarping_a63a4d110df54de685658c71257b858cf}{forward}} (self)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classloss_1_1flow_1_1EventWarping_a9897c73efcc62ce88e705f48b3e18271}{loss\+\_\+scaling}}
+\item 
+\mbox{\hyperlink{classloss_1_1flow_1_1EventWarping_a20a6a8a54bfd41fbde58693d6130dd4d}{res}}
+\item 
+\mbox{\hyperlink{classloss_1_1flow_1_1EventWarping_a59ed7c7fd77f4181da46dd2dc3ea298f}{flow\+\_\+scaling}}
+\item 
+\mbox{\hyperlink{classloss_1_1flow_1_1EventWarping_a7c8dab32684030668241e90e903c0205}{weight}}
+\item 
+\mbox{\hyperlink{classloss_1_1flow_1_1EventWarping_a8ad9fcd7160df9dc5c01d040e5871606}{smoothing\+\_\+mask}}
+\item 
+\mbox{\hyperlink{classloss_1_1flow_1_1EventWarping_a9561ab6bfacc794307bd4682684563bf}{overwrite\+\_\+intermediate}}
+\item 
+\mbox{\hyperlink{classloss_1_1flow_1_1EventWarping_a636ef3608e2f128cef744313a4534e04}{device}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classloss_1_1flow_1_1EventWarping_a2ad4f61714d2b87c4943c9bf49016f3b}{\+\_\+passes}}
+\item 
+\mbox{\hyperlink{classloss_1_1flow_1_1EventWarping_a846329fabef57e17026d07410d576b3a}{\+\_\+event\+\_\+list}}
+\item 
+\mbox{\hyperlink{classloss_1_1flow_1_1EventWarping_a04cf6029f342818990f3970f381771b1}{\+\_\+flow\+\_\+list}}
+\item 
+\mbox{\hyperlink{classloss_1_1flow_1_1EventWarping_a46e17614112818df116a4b1f9dd75ba3}{\+\_\+flow\+\_\+maps\+\_\+x}}
+\item 
+\mbox{\hyperlink{classloss_1_1flow_1_1EventWarping_a139532365b2ca20d5dbd4a4d78c83065}{\+\_\+flow\+\_\+maps\+\_\+y}}
+\item 
+\mbox{\hyperlink{classloss_1_1flow_1_1EventWarping_ac5a1d3b2749be3c1332572c1b84f9bfb}{\+\_\+pol\+\_\+mask\+\_\+list}}
+\item 
+\mbox{\hyperlink{classloss_1_1flow_1_1EventWarping_abad31c10fe6c683e5e2a5db47490caec}{\+\_\+event\+\_\+mask}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Contrast maximization loss, as described in Section 3.2 of the paper 'Unsupervised Event-based Learning
+of Optical Flow, Depth, and Egomotion', Zhu et al., CVPR'19.
+The contrast maximization loss is the minimization of the per-pixel and per-polarity image of averaged
+timestamps of the input events after they have been compensated for their motion using the estimated
+optical flow. This minimization is performed in a forward and in a backward fashion to prevent scaling
+issues during backpropagation.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classloss_1_1flow_1_1EventWarping_a87bbe6708d98d41df14b39c19cc49f0e}\label{classloss_1_1flow_1_1EventWarping_a87bbe6708d98d41df14b39c19cc49f0e}} 
+\index{loss.flow.EventWarping@{loss.flow.EventWarping}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!loss.flow.EventWarping@{loss.flow.EventWarping}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def loss.\+flow.\+Event\+Warping.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{config,  }\item[{}]{device,  }\item[{}]{flow\+\_\+scaling = {\ttfamily None},  }\item[{}]{loss\+\_\+scaling = {\ttfamily True} }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classloss_1_1flow_1_1EventWarping_abd2d5d0d15da20e494e4088f8ff20abd}\label{classloss_1_1flow_1_1EventWarping_abd2d5d0d15da20e494e4088f8ff20abd}} 
+\index{loss.flow.EventWarping@{loss.flow.EventWarping}!event\_flow\_association@{event\_flow\_association}}
+\index{event\_flow\_association@{event\_flow\_association}!loss.flow.EventWarping@{loss.flow.EventWarping}}
+\doxysubsubsection{\texorpdfstring{event\_flow\_association()}{event\_flow\_association()}}
+{\footnotesize\ttfamily def loss.\+flow.\+Event\+Warping.\+event\+\_\+flow\+\_\+association (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{flow\+\_\+list,  }\item[{}]{event\+\_\+list,  }\item[{}]{pol\+\_\+mask,  }\item[{}]{event\+\_\+mask }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}:param flow_list: [[batch_size x 2 x H x W]] list of optical flow (x, y) maps
+:param event_list: [batch_size x N x 4] input events (ts, y, x, p)
+:param pol_mask: [batch_size x N x 2] polarity mask (pos, neg)
+:param event_mask: [batch_size x 1 x H x W] event mask
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classloss_1_1flow_1_1EventWarping_a2a40c0783a29a7388f5afd7caaa4d80f}\label{classloss_1_1flow_1_1EventWarping_a2a40c0783a29a7388f5afd7caaa4d80f}} 
+\index{loss.flow.EventWarping@{loss.flow.EventWarping}!event\_mask@{event\_mask}}
+\index{event\_mask@{event\_mask}!loss.flow.EventWarping@{loss.flow.EventWarping}}
+\doxysubsubsection{\texorpdfstring{event\_mask()}{event\_mask()}}
+{\footnotesize\ttfamily def loss.\+flow.\+Event\+Warping.\+event\+\_\+mask (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classloss_1_1flow_1_1EventWarping_a63a4d110df54de685658c71257b858cf}\label{classloss_1_1flow_1_1EventWarping_a63a4d110df54de685658c71257b858cf}} 
+\index{loss.flow.EventWarping@{loss.flow.EventWarping}!forward@{forward}}
+\index{forward@{forward}!loss.flow.EventWarping@{loss.flow.EventWarping}}
+\doxysubsubsection{\texorpdfstring{forward()}{forward()}}
+{\footnotesize\ttfamily def loss.\+flow.\+Event\+Warping.\+forward (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classloss_1_1flow_1_1EventWarping_a3f3ee2c508546e54520be47b78e6d445}\label{classloss_1_1flow_1_1EventWarping_a3f3ee2c508546e54520be47b78e6d445}} 
+\index{loss.flow.EventWarping@{loss.flow.EventWarping}!num\_events@{num\_events}}
+\index{num\_events@{num\_events}!loss.flow.EventWarping@{loss.flow.EventWarping}}
+\doxysubsubsection{\texorpdfstring{num\_events()}{num\_events()}}
+{\footnotesize\ttfamily def loss.\+flow.\+Event\+Warping.\+num\+\_\+events (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classloss_1_1flow_1_1EventWarping_a801d44210ce11c42084cfd128efd5a74}\label{classloss_1_1flow_1_1EventWarping_a801d44210ce11c42084cfd128efd5a74}} 
+\index{loss.flow.EventWarping@{loss.flow.EventWarping}!overwrite\_intermediate\_flow@{overwrite\_intermediate\_flow}}
+\index{overwrite\_intermediate\_flow@{overwrite\_intermediate\_flow}!loss.flow.EventWarping@{loss.flow.EventWarping}}
+\doxysubsubsection{\texorpdfstring{overwrite\_intermediate\_flow()}{overwrite\_intermediate\_flow()}}
+{\footnotesize\ttfamily def loss.\+flow.\+Event\+Warping.\+overwrite\+\_\+intermediate\+\_\+flow (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{flow\+\_\+list }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}:param flow_list: [[batch_size x 2 x H x W]] list of optical flow (x, y) maps
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classloss_1_1flow_1_1EventWarping_afabd12928c884db6b895e5c1c758d898}\label{classloss_1_1flow_1_1EventWarping_afabd12928c884db6b895e5c1c758d898}} 
+\index{loss.flow.EventWarping@{loss.flow.EventWarping}!reset@{reset}}
+\index{reset@{reset}!loss.flow.EventWarping@{loss.flow.EventWarping}}
+\doxysubsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily def loss.\+flow.\+Event\+Warping.\+reset (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classloss_1_1flow_1_1EventWarping_a846329fabef57e17026d07410d576b3a}\label{classloss_1_1flow_1_1EventWarping_a846329fabef57e17026d07410d576b3a}} 
+\index{loss.flow.EventWarping@{loss.flow.EventWarping}!\_event\_list@{\_event\_list}}
+\index{\_event\_list@{\_event\_list}!loss.flow.EventWarping@{loss.flow.EventWarping}}
+\doxysubsubsection{\texorpdfstring{\_event\_list}{\_event\_list}}
+{\footnotesize\ttfamily loss.\+flow.\+Event\+Warping.\+\_\+event\+\_\+list\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classloss_1_1flow_1_1EventWarping_abad31c10fe6c683e5e2a5db47490caec}\label{classloss_1_1flow_1_1EventWarping_abad31c10fe6c683e5e2a5db47490caec}} 
+\index{loss.flow.EventWarping@{loss.flow.EventWarping}!\_event\_mask@{\_event\_mask}}
+\index{\_event\_mask@{\_event\_mask}!loss.flow.EventWarping@{loss.flow.EventWarping}}
+\doxysubsubsection{\texorpdfstring{\_event\_mask}{\_event\_mask}}
+{\footnotesize\ttfamily loss.\+flow.\+Event\+Warping.\+\_\+event\+\_\+mask\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classloss_1_1flow_1_1EventWarping_a04cf6029f342818990f3970f381771b1}\label{classloss_1_1flow_1_1EventWarping_a04cf6029f342818990f3970f381771b1}} 
+\index{loss.flow.EventWarping@{loss.flow.EventWarping}!\_flow\_list@{\_flow\_list}}
+\index{\_flow\_list@{\_flow\_list}!loss.flow.EventWarping@{loss.flow.EventWarping}}
+\doxysubsubsection{\texorpdfstring{\_flow\_list}{\_flow\_list}}
+{\footnotesize\ttfamily loss.\+flow.\+Event\+Warping.\+\_\+flow\+\_\+list\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classloss_1_1flow_1_1EventWarping_a46e17614112818df116a4b1f9dd75ba3}\label{classloss_1_1flow_1_1EventWarping_a46e17614112818df116a4b1f9dd75ba3}} 
+\index{loss.flow.EventWarping@{loss.flow.EventWarping}!\_flow\_maps\_x@{\_flow\_maps\_x}}
+\index{\_flow\_maps\_x@{\_flow\_maps\_x}!loss.flow.EventWarping@{loss.flow.EventWarping}}
+\doxysubsubsection{\texorpdfstring{\_flow\_maps\_x}{\_flow\_maps\_x}}
+{\footnotesize\ttfamily loss.\+flow.\+Event\+Warping.\+\_\+flow\+\_\+maps\+\_\+x\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classloss_1_1flow_1_1EventWarping_a139532365b2ca20d5dbd4a4d78c83065}\label{classloss_1_1flow_1_1EventWarping_a139532365b2ca20d5dbd4a4d78c83065}} 
+\index{loss.flow.EventWarping@{loss.flow.EventWarping}!\_flow\_maps\_y@{\_flow\_maps\_y}}
+\index{\_flow\_maps\_y@{\_flow\_maps\_y}!loss.flow.EventWarping@{loss.flow.EventWarping}}
+\doxysubsubsection{\texorpdfstring{\_flow\_maps\_y}{\_flow\_maps\_y}}
+{\footnotesize\ttfamily loss.\+flow.\+Event\+Warping.\+\_\+flow\+\_\+maps\+\_\+y\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classloss_1_1flow_1_1EventWarping_a2ad4f61714d2b87c4943c9bf49016f3b}\label{classloss_1_1flow_1_1EventWarping_a2ad4f61714d2b87c4943c9bf49016f3b}} 
+\index{loss.flow.EventWarping@{loss.flow.EventWarping}!\_passes@{\_passes}}
+\index{\_passes@{\_passes}!loss.flow.EventWarping@{loss.flow.EventWarping}}
+\doxysubsubsection{\texorpdfstring{\_passes}{\_passes}}
+{\footnotesize\ttfamily loss.\+flow.\+Event\+Warping.\+\_\+passes\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classloss_1_1flow_1_1EventWarping_ac5a1d3b2749be3c1332572c1b84f9bfb}\label{classloss_1_1flow_1_1EventWarping_ac5a1d3b2749be3c1332572c1b84f9bfb}} 
+\index{loss.flow.EventWarping@{loss.flow.EventWarping}!\_pol\_mask\_list@{\_pol\_mask\_list}}
+\index{\_pol\_mask\_list@{\_pol\_mask\_list}!loss.flow.EventWarping@{loss.flow.EventWarping}}
+\doxysubsubsection{\texorpdfstring{\_pol\_mask\_list}{\_pol\_mask\_list}}
+{\footnotesize\ttfamily loss.\+flow.\+Event\+Warping.\+\_\+pol\+\_\+mask\+\_\+list\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classloss_1_1flow_1_1EventWarping_a636ef3608e2f128cef744313a4534e04}\label{classloss_1_1flow_1_1EventWarping_a636ef3608e2f128cef744313a4534e04}} 
+\index{loss.flow.EventWarping@{loss.flow.EventWarping}!device@{device}}
+\index{device@{device}!loss.flow.EventWarping@{loss.flow.EventWarping}}
+\doxysubsubsection{\texorpdfstring{device}{device}}
+{\footnotesize\ttfamily loss.\+flow.\+Event\+Warping.\+device}
+
+\mbox{\Hypertarget{classloss_1_1flow_1_1EventWarping_a59ed7c7fd77f4181da46dd2dc3ea298f}\label{classloss_1_1flow_1_1EventWarping_a59ed7c7fd77f4181da46dd2dc3ea298f}} 
+\index{loss.flow.EventWarping@{loss.flow.EventWarping}!flow\_scaling@{flow\_scaling}}
+\index{flow\_scaling@{flow\_scaling}!loss.flow.EventWarping@{loss.flow.EventWarping}}
+\doxysubsubsection{\texorpdfstring{flow\_scaling}{flow\_scaling}}
+{\footnotesize\ttfamily loss.\+flow.\+Event\+Warping.\+flow\+\_\+scaling}
+
+\mbox{\Hypertarget{classloss_1_1flow_1_1EventWarping_a9897c73efcc62ce88e705f48b3e18271}\label{classloss_1_1flow_1_1EventWarping_a9897c73efcc62ce88e705f48b3e18271}} 
+\index{loss.flow.EventWarping@{loss.flow.EventWarping}!loss\_scaling@{loss\_scaling}}
+\index{loss\_scaling@{loss\_scaling}!loss.flow.EventWarping@{loss.flow.EventWarping}}
+\doxysubsubsection{\texorpdfstring{loss\_scaling}{loss\_scaling}}
+{\footnotesize\ttfamily loss.\+flow.\+Event\+Warping.\+loss\+\_\+scaling}
+
+\mbox{\Hypertarget{classloss_1_1flow_1_1EventWarping_a9561ab6bfacc794307bd4682684563bf}\label{classloss_1_1flow_1_1EventWarping_a9561ab6bfacc794307bd4682684563bf}} 
+\index{loss.flow.EventWarping@{loss.flow.EventWarping}!overwrite\_intermediate@{overwrite\_intermediate}}
+\index{overwrite\_intermediate@{overwrite\_intermediate}!loss.flow.EventWarping@{loss.flow.EventWarping}}
+\doxysubsubsection{\texorpdfstring{overwrite\_intermediate}{overwrite\_intermediate}}
+{\footnotesize\ttfamily loss.\+flow.\+Event\+Warping.\+overwrite\+\_\+intermediate}
+
+\mbox{\Hypertarget{classloss_1_1flow_1_1EventWarping_a20a6a8a54bfd41fbde58693d6130dd4d}\label{classloss_1_1flow_1_1EventWarping_a20a6a8a54bfd41fbde58693d6130dd4d}} 
+\index{loss.flow.EventWarping@{loss.flow.EventWarping}!res@{res}}
+\index{res@{res}!loss.flow.EventWarping@{loss.flow.EventWarping}}
+\doxysubsubsection{\texorpdfstring{res}{res}}
+{\footnotesize\ttfamily loss.\+flow.\+Event\+Warping.\+res}
+
+\mbox{\Hypertarget{classloss_1_1flow_1_1EventWarping_a8ad9fcd7160df9dc5c01d040e5871606}\label{classloss_1_1flow_1_1EventWarping_a8ad9fcd7160df9dc5c01d040e5871606}} 
+\index{loss.flow.EventWarping@{loss.flow.EventWarping}!smoothing\_mask@{smoothing\_mask}}
+\index{smoothing\_mask@{smoothing\_mask}!loss.flow.EventWarping@{loss.flow.EventWarping}}
+\doxysubsubsection{\texorpdfstring{smoothing\_mask}{smoothing\_mask}}
+{\footnotesize\ttfamily loss.\+flow.\+Event\+Warping.\+smoothing\+\_\+mask}
+
+\mbox{\Hypertarget{classloss_1_1flow_1_1EventWarping_a7c8dab32684030668241e90e903c0205}\label{classloss_1_1flow_1_1EventWarping_a7c8dab32684030668241e90e903c0205}} 
+\index{loss.flow.EventWarping@{loss.flow.EventWarping}!weight@{weight}}
+\index{weight@{weight}!loss.flow.EventWarping@{loss.flow.EventWarping}}
+\doxysubsubsection{\texorpdfstring{weight}{weight}}
+{\footnotesize\ttfamily loss.\+flow.\+Event\+Warping.\+weight}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{flow_8py}{flow.\+py}}\end{DoxyCompactItemize}
