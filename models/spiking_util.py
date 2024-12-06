@@ -138,4 +138,5 @@ if __name__ == "__main__":
     plt.ylabel("grad")
     plt.grid()
     plt.legend()
+    plt.savefig("spike_grads.png")
     plt.show()
