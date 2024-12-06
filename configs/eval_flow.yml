@@ -4,8 +4,17 @@ data:
     window: 15000 # events/time/frames/flowmaps
     window_eval: 15000 # events
 
+# model:
+#     mask_output: True
 model:
+    name: LIFFireNet # Specify the model name
+    num_bins: 10      # Number of temporal bins
+    base_num_channels: 16  # Base number of channels
+    kernel_size: 3         # Kernel size for convolution
+    encoding: True         # Whether to use encoding
     mask_output: True
+    activations: ["relu", "relu"]
+    spiking_neuron: Null
 
 metrics:
     name: [FWL, RSAT]  # FWL, RSAT, AEE

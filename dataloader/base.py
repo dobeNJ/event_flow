@@ -153,6 +153,7 @@ class BaseDataLoader(torch.utils.data.Dataset):
         :param ps: [N] tensor with event polarity ([-1, 1])
         :return [2 x H x W] event representation
         """
+        # return events_to_channels(xs, ys, ps)
 
         return events_to_channels(xs, ys, ps, sensor_size=self.config["loader"]["resolution"])
 

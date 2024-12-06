@@ -37,15 +37,53 @@ class FlowMaps:
         self.names = []
 
     def __call__(self, name, h5obj):
-        if hasattr(h5obj, "dtype") and name not in self.names:
+        if hasattr(h5obj, "dtype") and name not in self.names: # typically check if the called object is a dataset 
             self.names += [name]
             self.ts += [h5obj.attrs["timestamp"]]
+             ### ==> a list of dataset that have the attribute timestamp
 
+# class FlowMaps:
+#     """
+#     Utility class for reading the optical flow maps encoded in the HDF5 files.
+#     """
+
+#     def __init__(self):
+#         self.ts = []
+#         self.names = []
+
+#     # def __call__(self, name, h5obj):
+#     #     if "dtype" in h5obj and name not in self.names:
+#     #         self.names += [name]
+#     #         self.ts += [h5obj["timestamp"]]
+#     def __call__(self, name, h5obj):
+#         # Check for 'dtype' attribute to avoid FutureWarning
+#         if hasattr(h5obj, "dtype") and name not in self.names:
+#             self.names.append(name)
+#             self.ts.append(h5obj.attrs["timestamp"])
+
+# class FlowMaps:
+#     """
+#     Utility class for reading the optical flow maps encoded in the HDF5 files.
+#     """
+
+#     def __init__(self):
+#         self.ts = []
+#         self.names = []
+
+#     def __call__(self, name, h5obj):
+#         if hasattr(h5obj, "dtype") and name not in self.names:
+#             self.names.append(name)
+#             timestamp = h5obj.attrs.get("timestamps", None)
+#         if timestamp is None:
+#             print(f"Warning: Missing or None timestamp in {name}")
+#         self.ts.append(timestamp)
 
 class H5Loader(BaseDataLoader):
     def __init__(self, config, num_bins, round_encoding=False):
         super().__init__(config, num_bins, round_encoding)
         self.last_proc_timestamp = 0
+        #print(f"Parsed configuration: {config}")
+
 
         # "memory" that goes from forward pass to the next
         self.batch_idx = [i for i in range(self.config["loader"]["batch_size"])]  # event sequence
@@ -59,13 +97,26 @@ class H5Loader(BaseDataLoader):
             for file in files:
                 if file.endswith(".h5"):
                     self.files.append(os.path.join(root, file))
+        print("list path HDF5",self.files)           
 
         # open first files
         self.open_files = []
         self.batch_last_ts = []
+        #print(self.config["loader"]["batch_size"])
         for batch in range(self.config["loader"]["batch_size"]):
+
             self.open_files.append(h5py.File(self.files[batch], "r"))
+            
+            # self.batch_last_ts.append(self.open_files[-1]["events/ts"][-1] - self.open_files[-1].attrs["t0"])
+            #self.batch_last_ts.append(self.open_files[-1]["events/ts"][-1] - self.open_files[-1]["events/ts"].attrs["t0"])
             self.batch_last_ts.append(self.open_files[-1]["events/ts"][-1] - self.open_files[-1].attrs["t0"])
+            
+            
+            #self.batch_last_ts.append(self.open_files[-1]["davis/right/blended_image_rect_ts"][-1] - self.open_files[-1]["davis/right/blended_image_rect_ts"][0] )
+            # self.batch_last_ts.append(self.open_files[-1]["events/events"][-1][2] - self.open_files[-1]["events/events"][0][2] )
+            
+
+        print(self.batch_last_ts )  
 
         # load frames from open files
         self.open_files_frames = []
@@ -77,14 +128,16 @@ class H5Loader(BaseDataLoader):
 
         # load GT optical flow maps from open files
         self.open_files_flowmaps = []
-        if config["data"]["mode"] == "gtflow_dt1" or config["data"]["mode"] == "gtflow_dt4":
+        if self.config["data"]["mode"] == "gtflow_dt1" or self.config["data"]["mode"] == "gtflow_dt4":
             for batch in range(self.config["loader"]["batch_size"]):
                 flowmaps = FlowMaps()
-                if config["data"]["mode"] == "gtflow_dt1":
+                if self.config["data"]["mode"] == "gtflow_dt1":
                     self.open_files[batch]["flow_dt1"].visititems(flowmaps)
-                elif config["data"]["mode"] == "gtflow_dt4":
+                elif self.config["data"]["mode"] == "gtflow_dt4":
                     self.open_files[batch]["flow_dt4"].visititems(flowmaps)
                 self.open_files_flowmaps.append(flowmaps)
+        
+        print( self.open_files_flowmaps)
 
         # progress bars
         if self.config["vis"]["bars"]:
@@ -176,6 +229,11 @@ class H5Loader(BaseDataLoader):
         """
         Find closest event index for a given timestamp through binary search.
         """
+        print(f"file['events/ts']: {file['events/ts'][:10]}")  # Print first few elements
+        print(f"timestamp: {timestamp}")  # Print the timestamp being searched
+
+        if timestamp is None:
+            raise ValueError("Timestamp is None. Check the caller of `find_ts_index`.")
 
         return binary_search_array(file["events/ts"], timestamp)
 
@@ -204,7 +262,7 @@ class H5Loader(BaseDataLoader):
             ps = np.zeros((0))
             if not restart:
                 idx0, idx1 = self.get_event_index(batch, window=self.config["data"]["window"])
-
+    
                 if (
                     self.config["data"]["mode"] == "frames"
                     or self.config["data"]["mode"] == "gtflow_dt1"

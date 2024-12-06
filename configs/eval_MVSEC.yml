@@ -5,7 +5,14 @@ data:
     window_eval: 15000 # not used
 
 model:
+    name: LIFFireNet # Specify the model name
+    num_bins: 10      # Number of temporal bins
+    base_num_channels: 16  # Base number of channels
+    kernel_size: 3         # Kernel size for convolution
+    encoding: True         # Whether to use encoding
     mask_output: True
+    activations: ["relu", "relu"]
+    spiking_neuron: Null
 
 metrics:
     name: [AEE]  # FWL, RSAT, AEE
@@ -25,7 +32,7 @@ vis:
     store: False
 
 hot_filter:
-    enabled: True
+    enabled: False
     max_px: 100
     min_obvs: 5
     max_rate: 0.8

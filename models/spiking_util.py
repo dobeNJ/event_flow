@@ -2,6 +2,8 @@ from math import pi
 
 import torch
 
+def relu(x):
+    return x.clamp(min=0)
 
 def gaussian(x, mu, sigma):
     """
@@ -111,6 +113,7 @@ def arctanspike(x, thresh=torch.tensor(1.0), width=torch.tensor(10.0)):
 
 if __name__ == "__main__":
     import matplotlib.pyplot as plt
+    #plt.switch_backend('TkAgg')
 
     x = torch.linspace(-5, 5, 1001)
 
@@ -138,5 +141,5 @@ if __name__ == "__main__":
     plt.ylabel("grad")
     plt.grid()
     plt.legend()
-    plt.savefig("spike_grads.png")
     plt.show()
+    
