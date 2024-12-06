@@ -6,11 +6,8 @@ import numpy as np
 import torch
 
 
+# test the function binary_search_array :
 def binary_search_array(array, x, left=None, right=None, side="left"):
-    """
-    Binary search through a sorted array.
-    """
-
     left = 0 if left is None else left
     right = len(array) - 1 if right is None else right
     mid = left + (right - left) // 2
@@ -18,14 +15,32 @@ def binary_search_array(array, x, left=None, right=None, side="left"):
     if left > right:
         return left if side == "left" else right
 
-    if array[mid] == x:
+    # Check for None values
+    if array[mid] is None:
+        raise ValueError(f"None value found in array at index {mid}.")
+    if x is None:
+        raise ValueError("Target value x is None.")
+
+    # Ensure mid_value is numeric
+    try:
+        mid_value = float(array[mid])
+        x = float(x)
+    except ValueError as e:
+        raise ValueError(f"Non-numeric value encountered: mid_value={array[mid]}, x={x}, error={e}")
+
+    # Debugging info
+    print(f"Checking mid_value: {mid_value}, target: {x}")
+
+    # Handle precision issues
+    atol = 1e-6 #1e-6
+    if np.isclose(mid_value, x, atol=atol):
         return mid
 
-    if x < array[mid]:
-        return binary_search_array(array, x, left=left, right=mid - 1)
-
-    return binary_search_array(array, x, left=mid + 1, right=right)
-
+    # Recursive search
+    if mid_value < x:
+        return binary_search_array(array, x, left=mid + 1, right=right, side=side)
+    else:
+        return binary_search_array(array, x, left=left, right=mid - 1, side=side)
 
 def events_to_image(xs, ys, ps, sensor_size=(180, 240), accumulate=True):
     """

@@ -1,11 +1,18 @@
 data:
-    path: datasets/data/MVSEC/
-    mode: gtflow_dt1 # gtflow_dt1/gtflow_dt4
+    path: /media/doha/SSK Drive/dataset/MVSEC_From_github/MVSEC/h5/ #/media/doha/SSK Drive/dataset/MVSEC/FLOW_GT/indoor_flying/indoor_flying1_gt_flow_dist/  #/media/doha/SSK Drive/dataset/MVSEC/ #../../../../../../media/doha/SSK Drive/dataset/MVSEC/
+    mode:  gtflow_dt1 #outdoor_night2_gt #outdoor_night3_data # gtflow_dt1/gtflow_dt4
     window: 1 # 1 for dt1, 0.25 for dt4
     window_eval: 15000 # not used
 
 model:
+    name: LIFFireNet # Specify the model name
+    num_bins: 10      # Number of temporal bins
+    base_num_channels: 16  # Base number of channels
+    kernel_size: 3         # Kernel size for convolution
+    encoding: True         # Whether to use encoding
     mask_output: True
+    activations: ["relu", "relu"]
+    spiking_neuron: Null
 
 metrics:
     name: [AEE]  # FWL, RSAT, AEE
@@ -25,7 +32,7 @@ vis:
     store: False
 
 hot_filter:
-    enabled: True
+    enabled: False
     max_px: 100
     min_obvs: 5
     max_rate: 0.8
