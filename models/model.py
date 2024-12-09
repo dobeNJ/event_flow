@@ -233,6 +233,7 @@ class FireNet(BaseModel):
         :param log: log activity
         :return: output dict with list of [N x 2 X H X W] (x, y) displacement within event_tensor.
         """
+        
 
         # input encoding
         if self.encoding == "voxel":
