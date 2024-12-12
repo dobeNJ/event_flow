@@ -20,7 +20,7 @@ class BaseSpike(torch.autograd.Function):
     @staticmethod
     def forward(ctx, x, width):
         ctx.save_for_backward(x, width)
-        return x.gt(0).float()
+        return x.gt(0).float() # x.gt(0) return true if x > 0, false otherwise -> convert to float
 
     @staticmethod
     def backward(ctx, grad_output):
@@ -141,5 +141,6 @@ if __name__ == "__main__":
     plt.ylabel("grad")
     plt.grid()
     plt.legend()
+    plt.savefig("spike_grads.png")
     plt.show()
     
